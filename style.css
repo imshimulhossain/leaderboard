@@ -1,0 +1,137 @@
+/* ------- Import Font ------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ------ Body ------ */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ------ Common CSS ------ */
+.container {
+    width: 870px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #562EFF;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+/* ------ Header Area CSS ------ */
+.header-area {
+    background: #562EFF;
+}
+
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+img.logo-img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+p.logo-name {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu-list ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item {
+    padding: 10px 20px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.profile-img img {
+    width: 50px;
+    margin-left: 20px;
+}
+
+
+/* ------------------------
+------- Main Area ---------
+-------------------------- */
+
+main {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #F3F1FF;
+}
+
+/* ----- Top Area ------- */
+.top-area .container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.top-player {
+    margin-bottom: 30px;
+}
+
+.player-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+}
+
+.player-photo {
+    width: 56px;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+/* ------- Horizontal Line: Section Break -------- */
+.section-break {
+    margin-bottom: 30px;
+    border: 1px solid #D1D1D1;
+}
+
+
+/* --------- Top Blog Area --------- */
+.articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.blog-thumbnail img {
+    width: 175px;
+    border-radius: 8px;
+}

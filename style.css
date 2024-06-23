@@ -8,9 +8,9 @@
 ------- Common Styles ----
 ------------------------- */
 * {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -20,7 +20,6 @@ body {
 .container {
     max-width: 870px;
     margin: 0 auto;
-    overflow-x: hidden;
 }
 
 h2 {
@@ -50,6 +49,11 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+#menu-toggle {
+    display: none;
 }
 
 .hamburger-menu {
@@ -63,11 +67,10 @@ h3 {
 
 img.logo-img {
     width: 40px;
-    margin-right: 10px;
 }
 
 p.logo-name {
-    display: inline-block;
+    margin-left: 10px;
     font-size: 24px;
     font-weight: 500;
     color: #ffffff;
@@ -88,6 +91,7 @@ p.logo-name {
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
+    cursor: pointer;
 }
 
 .profile-img img {
@@ -311,7 +315,32 @@ main {
     }
 
     .menu {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        padding-bottom: 20px;
+        flex-direction: column;
+        background-color: #562EFF;
+        border-top: 1px solid #ffffff;
         display: none;
+    }
+
+    .menu-list ul {
+        flex-direction: column;
+    }
+
+    .menu-list-item {
+        text-align: center;
+    }
+
+    #menu-toggle:checked~.menu {
+        display: flex;
+    }
+
+    .profile-img img {
+        margin: 0;
+        margin-top: 20px;
     }
 
     /* ------- Main Area ---------

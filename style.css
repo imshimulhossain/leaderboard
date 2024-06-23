@@ -7,14 +7,20 @@
 /* ----------------------
 ------- Common Styles ----
 ------------------------- */
-body {
+* {
+    box-sizing: border-box;
+    padding: 0;
     margin: 0;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
 }
 
 .container {
-    width: 870px;
+    max-width: 870px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -44,6 +50,10 @@ h3 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.hamburger-menu {
+    display: none;
 }
 
 .logo-area {
@@ -181,7 +191,7 @@ main {
 .courses {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px
+    gap: 25px;
 }
 
 .course {
@@ -235,10 +245,6 @@ main {
     font-size: 16px;
     border-radius: 25px;
     padding: 5px 10px;
-}
-
-.fa-clock,
-.time {
     color: #FF4A60;
     font-weight: 500;
 }
@@ -259,3 +265,110 @@ main {
     margin: 0;
     text-align: center;
 }
+
+
+/* ----------------------
+------- @Media Quaries -------
+------------------------- */
+
+/* ----- Mobile Device --------- */
+@media only screen and (max-width: 768px) {
+
+    /* ------- common styles -----
+    ------------------------------ */
+    body {
+        overflow-x: hidden;
+    }
+
+    main {
+        padding-top: 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    /* ------- Header Area ------- 
+    ------------------------------ */
+    .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+        flex-direction: row-reverse;
+    }
+
+    .hamburger-menu {
+        display: block;
+        font-size: 30px;
+        color: #ffffff;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /* ------- Main Area ---------
+    ------------------------------ */
+
+    /* ------- Top Player -------- */
+    .top-area .container {
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+    .player-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .player-photo {
+        max-width: 45px;
+    }
+
+    .player-name {
+        font-size: 14px;
+    }
+
+    /* ------- Top Blog ---------- */
+    .articles {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blog-author {
+        font-size: 14px;
+    }
+
+    /* ------- Latest Courses ---- */
+    .course-area .container {
+        padding: 20px;
+    }
+
+    .courses {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        overflow: hidden;
+    }
+
+    .course-instructor {
+        font-size: 14px;
+    }
+
+    .course-duration {
+        font-size: 14px;
+    }
+
+    /* ------- Footer Area -------
+    ------------------------------ */
+    .copy-text {
+        font-size: 14px;
+    }
+}
+
+
+/* ============ End =========== */
